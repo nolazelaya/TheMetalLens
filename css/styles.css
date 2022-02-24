@@ -4,13 +4,11 @@
    you to simply add your own. This is a basic template 
    after all.
    ---------------------------------------------------------*/
-    body {
-   
-    }
+
     /* Default link styling */
-    a:link { color:#0271fb; }
-    a:visited { color:#bd02fb; }
-    a:hover, a:focus { color:#000; }
+    a:link { color:#aaa; text-decoration: none;}
+    a:visited { color:#666; }
+    a:hover, a:focus { color:#fff; text-decoration: underline;}
     a:active { color:#fb0e02; }
     
     
@@ -19,10 +17,147 @@
    Author's styles
    ---------------------------------------------------------*/
     body {
-   
+      font-family: 'Esteban', serif;
+      font-size: 16px;
+      text-align: center;
+      background-color: #3b0000;
+      color: #c4c3c3;
+      width: 100%;
     }
 
+    h1 {
+      font-size: 2em;
+      text-transform: uppercase;
+      padding-top: 45px;
+    }
 
+    h3 {
+      font-size: 1.25em;
+      text-transform: uppercase;
+    }
+
+    .wrap {
+      display: flex;
+      flex-flow: column;
+    }
+
+/*                                        HEADER (BANNER) STYLE                                         */
+
+    header[role=banner] {
+      display: flex;
+      flex-flow: column wrap;
+      justify-content: space-between;
+      width:100%;
+      background-color: #1d0000;
+      background-image: url("../img/skull-icon-v2.2.svg");
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: 10em;
+      align-items: center;
+      min-height: 600px;
+    }
+
+    nav {
+      display: flex;
+      flex-flow: row wrap;
+      width: 100%;
+      justify-content: space-around;
+      margin-top: 100px;
+    }
+
+/*                                        PODCAST FEED STYLES                                         */
+
+    #podcast-feed {
+      display: flex;
+      flex-flow: column wrap;
+      align-items: center;
+    }
+
+    #podcast-feed p {
+      padding: 5% 5% 20% 5%;
+      text-transform: uppercase;
+      text-align: center;
+    }
+
+    .podcast-feed-container {
+      position: relative;
+      overflow: hidden;
+      width: 90%;
+      padding-top: 56.25%;
+    }
+
+    .youtube-feed {
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      width: 100%;
+      height: 100%;
+    }
+/*                                        LOCAL MUSIC (BANDCAMP) FEED STYLES                                         */
+    #local-music {
+      display: flex;
+      flex-flow: column wrap;
+      align-items: center;
+      padding: 0px 15px;
+      background-image: linear-gradient(#ccd5de, #3b0000);
+      color:#3b0000;
+    }
+
+    .bandcamp-feed {
+      width:100%;
+      display:flex;
+      flex-flow: row wrap;
+      align-items: center;
+      justify-content: space-around;
+      padding-bottom: 45px;
+}
+
+    .bandcamp-feed iframe {
+      border: 0; 
+      width: 275px; 
+      height: 417px;
+      padding: 40px 0;
+    }
+/*                                        "ABOUT US" STYLES                                         */
+    #about {
+      display: flex;
+      flex-flow: column wrap;
+      align-items: center;
+      padding: 0 45px 45px 45px;
+    }
+
+    #about h1 {
+      font-size:2em;
+    }
+
+    #about p {
+      text-align:justify;
+    }
+/*                                        FOOTER (SOCIAL ICONS) STYLES                                         */
+    footer {
+      color:#ff0000;
+      background-color:#171010;
+      display: flex;
+      flex-flow: column wrap;
+      align-items: center;
+      padding: 45px;
+    }
+
+    footer i {
+      font-size: 2em;
+      color:#ff0000;
+      padding: 0 7px 0 7px;
+    }
+
+    .social-icons {
+      /* min-width: 50%;
+      max-width: 70%; */
+      /* display: flex;
+      justify-content: space-around; */
+      padding-bottom: 45px;
+    }
     
 /* ---------------------------------------------------------
    Print styles
@@ -58,4 +193,178 @@
     }
 
     figure img { border:1px solid #000; }
+}
+
+/* ----------------------------- BREAKPOINTS ----------------------------- */
+/* ************************************************          320px to 572px           ************************************************ */
+@media (min-width: 320px) and (max-width: 572px)  {
+	body {
+		font-size: 18px;
+	}
+  header[role=banner] {
+    min-height: 700px;
+  }
+}
+/* ************************************************          573px to 899px           ************************************************ */
+@media (min-width: 573px) and (max-width: 899px)  {
+	body {
+		font-size: 24px;
+	}
+  header[role=banner] {
+    min-height: 800px;
+  }
+}
+/* ************************************************          900px to 1023px           ************************************************ */
+@media (min-width: 900px) and (max-width: 1023px)  {
+	body {
+		font-size: 28px;
+	}
+  nav {
+    width: 100%;
+  }
+	h1 {
+		font-size: 1.75em;
+	}
+}
+/* ************************************************          1024px to 1199px           ************************************************ */
+@media (min-width: 1024px) and (max-width: 1199px)  {
+	body {
+		font-size: 32px;
+	}
+  header[role=banner] h1 {
+    margin:0;
+    padding-top: 1em;
+    padding-left: 1.75em;
+  }
+  header[role=banner] {
+    flex-flow:row;
+    align-items:flex-start;
+    width:100%;
+    background-color: #1d0000;
+    background-image: url("../img/skull-icon-v2.2.svg");
+    background-position:   left;
+    background-size: 3em;
+    min-height: 200px;
+  }
+  nav {
+    width: max-content;
+    margin-top: 1.9em;
+  }
+  nav h3 {
+    font-size: .75em;
+    padding: 0 20px;
+  }
+  footer {
+    color:#ff0000;
+    background-color:#171010;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    padding: 45px;
+  }
+}
+/* ************************************************          1200px to 1799px           ************************************************ */
+@media (min-width: 1200px) and (max-width: 1799px)  {
+  header[role=banner] h1 {
+    font-size: 4em;
+    margin:0;
+    padding-top: .3em;
+    padding-left: 1.45em;
+  }
+  header[role=banner] {
+    padding:25px 0;
+    flex-flow:row;
+    align-items:flex-start;
+    width:100%;
+    background-color: #1d0000;
+    background-image: url("../img/skull-icon-v2.2.svg");
+    background-position:   1%;
+    background-size: 5em;
+    min-height: 0;
+  }
+  nav {
+    width: max-content;
+    margin-top: .9em;
+  }
+  nav h3 {
+    font-size: 1.75em;
+    padding: 0 20px;
+  }
+  .podcast-feed-container {
+        /* width and padding top are being cut in half to prevent video feed from growing too large */
+    position: relative;
+    overflow: hidden;
+    width: 45%;
+    padding-top: 28.125%;
+  }
+  #podcast-feed p {
+    padding: 5%;
+  }
+  #about {
+    align-items: flex-start;
+  }
+  #about p {
+    text-align: left;
+    font-size: 1.5em;
+  }
+  footer {
+    color:#ff0000;
+    background-color:#171010;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    padding: 45px;
+    font-size: 2em;
+  }
+}
+/* ************************************************          1800px and higher           ************************************************ */
+@media (min-width: 1800px)  {
+  body {
+    font-size: 36px;
+  }
+  header[role=banner] h1 {
+    font-size: 2em;
+    margin:0;
+    padding-top: .9em;
+    padding-left: 12%;
+  }
+  header[role=banner] {
+    padding:25px 0;
+    flex-flow:row;
+    align-items:flex-start;
+    width:100%;
+    background-color: #1d0000;
+    background-image: url("../img/skull-icon-v2.2.svg");
+    background-position: 1%;
+    background-size: 5em;
+    min-height: 0;
+  }
+  nav {
+    width: max-content;
+    margin-top: 1.5em;
+  }
+  nav h3 {
+    font-size: 1em;
+    padding: 0 20px;
+  }
+  .podcast-feed-container {
+    /* width and padding top are being cut in half to prevent video feed from growing too large */
+    position: relative;
+    overflow: hidden;
+    width: 45%;
+    padding-top: 28.125%;
+  }
+  #about {
+    align-items: flex-start;
+  }
+  #about p {
+    text-align: left;
+    font-size: .75em;
+  }
+  footer {
+    color:#ff0000;
+    background-color:#171010;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    padding: 45px;
+  }
 }
