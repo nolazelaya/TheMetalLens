@@ -20,6 +20,8 @@
     <!-- Include the site stylesheet -->
     <link href="css/styles.css" rel="stylesheet" media="all">
 
+    <link href="js/music.js" rel="scripts">
+
     <!-- Include the HTML5 shiv print polyfill for Internet Explorer browsers 8 and below -->
     <!--[if lt IE 9]><script src="js/html5shiv-printshiv.js" media="all"></script><![endif]-->
 
@@ -33,7 +35,7 @@
 <body>
 
     <header role="banner">
-        <h1>The Metal Lens</h1>
+        <h1><a href=index.html>The Metal Lens</a></h1>
         <nav role="navigation">
             <h3><a href="#local-music">music</a></h3>
             <h3><a href="#about">about</a></h3>
@@ -79,9 +81,107 @@
             </header>
             <p>Please enjoy some samples of New Orleans' finest</p>
             <div class="bandcamp-feed">
-              <iframe src="https://bandcamp.com/EmbeddedPlayer/album=3749720923/size=large/bgcol=333333/linkcol=e32c14/tracklist=false/transparent=true/" seamless></iframe>
-              <iframe src="https://bandcamp.com/EmbeddedPlayer/album=3978269160/size=large/bgcol=333333/linkcol=e32c14/tracklist=false/transparent=true/" seamless></iframe>
-              <iframe src="https://bandcamp.com/EmbeddedPlayer/album=549574986/size=large/bgcol=333333/linkcol=e32c14/tracklist=false/transparent=true/" seamless></iframe>
+              <iframe id="bcfeed1" src=""></iframe>
+              <iframe id="bcfeed2" src=""></iframe>
+              <iframe id="bcfeed3" src=""></iframe>
+              <script type="text/javascript">
+                var urls = new Array()
+                urls[0] = "https://bandcamp.com/EmbeddedPlayer/album=447355141/size=large/bgcol=333333/linkcol=e32c14/tracklist=false/transparent=true/";
+                urls[1] = "https://bandcamp.com/EmbeddedPlayer/album=3440835825/size=large/bgcol=333333/linkcol=e32c14/tracklist=false/transparent=true/";
+                urls[2] = "https://bandcamp.com/EmbeddedPlayer/album=266563372/size=large/bgcol=333333/linkcol=e32c14/tracklist=false/transparent=true/";
+                urls[3] = "https://bandcamp.com/EmbeddedPlayer/album=3312551242/size=large/bgcol=333333/linkcol=e32c14/tracklist=false/transparent=true/";
+                urls[4] = "https://bandcamp.com/EmbeddedPlayer/album=1184194136/size=large/bgcol=333333/linkcol=e32c14/tracklist=false/transparent=true/";
+                urls[5] = "https://bandcamp.com/EmbeddedPlayer/album=1942252085/size=large/bgcol=333333/linkcol=e32c14/tracklist=false/transparent=true/";
+                urls[6] = "https://bandcamp.com/EmbeddedPlayer/album=1747981166/size=large/bgcol=333333/linkcol=e32c14/tracklist=false/transparent=true/";
+                urls[7] = "https://bandcamp.com/EmbeddedPlayer/album=4089944320/size=large/bgcol=333333/linkcol=e32c14/tracklist=false/transparent=true/";
+                urls[8] = "https://bandcamp.com/EmbeddedPlayer/album=833031160/size=large/bgcol=333333/linkcol=e32c14/tracklist=false/transparent=true/";
+                urls[9] = "https://bandcamp.com/EmbeddedPlayer/album=4294497054/size=large/bgcol=333333/linkcol=e32c14/tracklist=false/transparent=true/";
+                urls[10] = "https://bandcamp.com/EmbeddedPlayer/album=79177316/size=large/bgcol=333333/linkcol=e32c14/tracklist=false/transparent=true/";
+                urls[11] = "https://bandcamp.com/EmbeddedPlayer/album=3823127710/size=large/bgcol=333333/linkcol=e32c14/tracklist=false/transparent=true/";
+                urls[12] = "https://bandcamp.com/EmbeddedPlayer/album=3683316284/size=large/bgcol=333333/linkcol=e32c14/tracklist=false/transparent=true/";
+                urls[13] = "https://bandcamp.com/EmbeddedPlayer/album=4242752820/size=large/bgcol=333333/linkcol=e32c14/tracklist=false/transparent=true/";
+                urls[14] = "https://bandcamp.com/EmbeddedPlayer/album=1298249647/size=large/bgcol=333333/linkcol=e32c14/tracklist=false/transparent=true/";
+                urls[15] = "https://bandcamp.com/EmbeddedPlayer/album=3548256759/size=large/bgcol=333333/linkcol=e32c14/tracklist=false/transparent=true/";
+                urls[16] = "https://bandcamp.com/EmbeddedPlayer/album=136746663/size=large/bgcol=333333/linkcol=e32c14/tracklist=false/transparent=true/";
+                urls[17] = "https://bandcamp.com/EmbeddedPlayer/album=1774297169/size=large/bgcol=333333/linkcol=e32c14/tracklist=false/transparent=true/";
+                urls[18] = "https://bandcamp.com/EmbeddedPlayer/album=2227645456/size=large/bgcol=333333/linkcol=e32c14/tracklist=false/transparent=true/";
+                urls[19] = "https://bandcamp.com/EmbeddedPlayer/album=2997383837/size=large/bgcol=333333/linkcol=e32c14/tracklist=false/transparent=true/";
+                urls[20] = "https://bandcamp.com/EmbeddedPlayer/album=3961186999/size=large/bgcol=333333/linkcol=e32c14/tracklist=false/transparent=true/";
+                urls[21] = "https://bandcamp.com/EmbeddedPlayer/album=454902531/size=large/bgcol=333333/linkcol=e32c14/tracklist=false/transparent=true/";
+                urls[22] = "https://bandcamp.com/EmbeddedPlayer/album=421909967/size=large/bgcol=333333/linkcol=e32c14/tracklist=false/transparent=true/";
+                urls[23] = "https://bandcamp.com/EmbeddedPlayer/album=981938274/size=large/bgcol=333333/linkcol=e32c14/tracklist=false/transparent=true/";
+                urls[24] = "https://bandcamp.com/EmbeddedPlayer/album=3670123542/size=large/bgcol=333333/linkcol=e32c14/tracklist=false/transparent=true/";
+                urls[25] = "https://bandcamp.com/EmbeddedPlayer/album=27905680/size=large/bgcol=333333/linkcol=e32c14/tracklist=false/transparent=true/";
+                urls[26] = "https://bandcamp.com/EmbeddedPlayer/album=1567969120/size=large/bgcol=333333/linkcol=e32c14/tracklist=false/transparent=true/";
+                urls[27] = "https://bandcamp.com/EmbeddedPlayer/album=3773917178/size=large/bgcol=333333/linkcol=e32c14/tracklist=false/transparent=true/";
+                urls[28] = "https://bandcamp.com/EmbeddedPlayer/album=3749720923/size=large/bgcol=333333/linkcol=e32c14/tracklist=false/transparent=true/";
+                urls[29] = "https://bandcamp.com/EmbeddedPlayer/album=1334111294/size=large/bgcol=333333/linkcol=e32c14/tracklist=false/transparent=true/";
+                urls[30] = "https://bandcamp.com/EmbeddedPlayer/album=4285466519/size=large/bgcol=333333/linkcol=e32c14/tracklist=false/transparent=true/";
+                urls[31] = "https://bandcamp.com/EmbeddedPlayer/album=2074473035/size=large/bgcol=333333/linkcol=e32c14/tracklist=false/transparent=true/";
+                urls[32] = "https://bandcamp.com/EmbeddedPlayer/album=354763714/size=large/bgcol=333333/linkcol=e32c14/tracklist=false/transparent=true/";
+                urls[33] = "https://bandcamp.com/EmbeddedPlayer/album=2085374163/size=large/bgcol=333333/linkcol=e32c14/tracklist=false/transparent=true/";
+                urls[34] = "https://bandcamp.com/EmbeddedPlayer/album=1427259337/size=large/bgcol=333333/linkcol=e32c14/tracklist=false/transparent=true/";
+                urls[35] = "https://bandcamp.com/EmbeddedPlayer/album=1530119787/size=large/bgcol=333333/linkcol=e32c14/tracklist=false/transparent=true/";
+                urls[36] = "https://bandcamp.com/EmbeddedPlayer/album=2210664860/size=large/bgcol=333333/linkcol=e32c14/tracklist=false/transparent=true/";
+                urls[37] = "https://bandcamp.com/EmbeddedPlayer/album=404186155/size=large/bgcol=333333/linkcol=e32c14/tracklist=false/transparent=true/";
+                urls[38] = "https://bandcamp.com/EmbeddedPlayer/album=1890548732/size=large/bgcol=333333/linkcol=e32c14/tracklist=false/transparent=true/";
+                urls[39] = "https://bandcamp.com/EmbeddedPlayer/album=1269626578/size=large/bgcol=333333/linkcol=e32c14/tracklist=false/transparent=true/";
+                urls[40] = "https://bandcamp.com/EmbeddedPlayer/album=560167536/size=large/bgcol=333333/linkcol=e32c14/tracklist=false/transparent=true/";
+                urls[41] = "https://bandcamp.com/EmbeddedPlayer/album=3061812468/size=large/bgcol=333333/linkcol=e32c14/tracklist=false/transparent=true/";
+                urls[42] = "https://bandcamp.com/EmbeddedPlayer/album=222847224/size=large/bgcol=333333/linkcol=e32c14/tracklist=false/transparent=true/";
+                urls[43] = "https://bandcamp.com/EmbeddedPlayer/album=2982877110/size=large/bgcol=333333/linkcol=e32c14/tracklist=false/transparent=true/";
+                urls[44] = "https://bandcamp.com/EmbeddedPlayer/album=3490714557/size=large/bgcol=333333/linkcol=e32c14/tracklist=false/transparent=true/";
+                urls[45] = "https://bandcamp.com/EmbeddedPlayer/album=3506250633/size=large/bgcol=333333/linkcol=e32c14/tracklist=false/transparent=true/";
+                urls[46] = "https://bandcamp.com/EmbeddedPlayer/album=3928394800/size=large/bgcol=333333/linkcol=e32c14/tracklist=false/transparent=true/";
+                urls[47] = "https://bandcamp.com/EmbeddedPlayer/album=2260718972/size=large/bgcol=333333/linkcol=e32c14/tracklist=false/transparent=true/";
+                urls[48] = "https://bandcamp.com/EmbeddedPlayer/album=2264967321/size=large/bgcol=333333/linkcol=e32c14/tracklist=false/transparent=true/";
+                urls[49] = "https://bandcamp.com/EmbeddedPlayer/album=2256147383/size=large/bgcol=333333/linkcol=e32c14/tracklist=false/transparent=true/";
+                urls[50] = "https://bandcamp.com/EmbeddedPlayer/album=416511439/size=large/bgcol=333333/linkcol=e32c14/tracklist=false/transparent=true/";
+                urls[51] = "https://bandcamp.com/EmbeddedPlayer/album=2991196971/size=large/bgcol=333333/linkcol=e32c14/tracklist=false/transparent=true/";
+                urls[52] = "https://bandcamp.com/EmbeddedPlayer/album=1832302380/size=large/bgcol=333333/linkcol=e32c14/tracklist=false/transparent=true/";
+                urls[53] = "https://bandcamp.com/EmbeddedPlayer/album=2023406473/size=large/bgcol=333333/linkcol=e32c14/tracklist=false/transparent=true/";
+                urls[54] = "https://bandcamp.com/EmbeddedPlayer/album=3615856960/size=large/bgcol=333333/linkcol=e32c14/tracklist=false/transparent=true/";
+                urls[55] = "https://bandcamp.com/EmbeddedPlayer/album=3978269160/size=large/bgcol=333333/linkcol=e32c14/tracklist=false/transparent=true/";
+                urls[56] = "https://bandcamp.com/EmbeddedPlayer/album=39485689/size=large/bgcol=333333/linkcol=e32c14/tracklist=false/transparent=true/";
+                urls[57] = "https://bandcamp.com/EmbeddedPlayer/album=4018742340/size=large/bgcol=333333/linkcol=e32c14/tracklist=false/transparent=true/";
+                urls[58] = "https://bandcamp.com/EmbeddedPlayer/album=139465182/size=large/bgcol=333333/linkcol=e32c14/tracklist=false/transparent=true/";
+                urls[59] = "https://bandcamp.com/EmbeddedPlayer/album=2765699114/size=large/bgcol=333333/linkcol=e32c14/tracklist=false/transparent=true/";
+                urls[60] = "https://bandcamp.com/EmbeddedPlayer/album=1198677452/size=large/bgcol=333333/linkcol=e32c14/tracklist=false/transparent=true/";
+                urls[61] = "https://bandcamp.com/EmbeddedPlayer/album=3073948883/size=large/bgcol=333333/linkcol=e32c14/tracklist=false/transparent=true/";
+                urls[62] = "https://bandcamp.com/EmbeddedPlayer/album=3616189238/size=large/bgcol=333333/linkcol=e32c14/tracklist=false/transparent=true/";
+                urls[63] = "https://bandcamp.com/EmbeddedPlayer/album=2887228883/size=large/bgcol=333333/linkcol=e32c14/tracklist=false/transparent=true/";
+                urls[64] = "https://bandcamp.com/EmbeddedPlayer/album=2644973981/size=large/bgcol=333333/linkcol=e32c14/tracklist=false/transparent=true/";
+                urls[65] = "https://bandcamp.com/EmbeddedPlayer/album=3311231030/size=large/bgcol=333333/linkcol=e32c14/tracklist=false/transparent=true/";
+                urls[66] = "https://bandcamp.com/EmbeddedPlayer/album=1982042750/size=large/bgcol=333333/linkcol=e32c14/tracklist=false/transparent=true/";
+                urls[67] = "https://bandcamp.com/EmbeddedPlayer/album=3479333483/size=large/bgcol=333333/linkcol=e32c14/tracklist=false/transparent=true/";
+                urls[68] = "https://bandcamp.com/EmbeddedPlayer/album=888771501/size=large/bgcol=333333/linkcol=e32c14/tracklist=false/transparent=true/";
+                urls[69] = "https://bandcamp.com/EmbeddedPlayer/album=1457890171/size=large/bgcol=333333/linkcol=e32c14/tracklist=false/transparent=true/";
+                urls[70] = "https://bandcamp.com/EmbeddedPlayer/album=2604136889/size=large/bgcol=333333/linkcol=e32c14/tracklist=false/transparent=true/";
+                urls[71] = "https://bandcamp.com/EmbeddedPlayer/album=277583732/size=large/bgcol=333333/linkcol=e32c14/tracklist=false/transparent=true/";
+                urls[72] = "https://bandcamp.com/EmbeddedPlayer/album=1643992727/size=large/bgcol=333333/linkcol=e32c14/tracklist=false/transparent=true/";
+                urls[73] = "https://bandcamp.com/EmbeddedPlayer/album=2053657532/size=large/bgcol=333333/linkcol=e32c14/tracklist=false/transparent=true/";
+                urls[74] = "https://bandcamp.com/EmbeddedPlayer/album=688582004/size=large/bgcol=333333/linkcol=e32c14/tracklist=false/transparent=true/";
+                urls[75] = "https://bandcamp.com/EmbeddedPlayer/album=1628805237/size=large/bgcol=333333/linkcol=e32c14/tracklist=false/transparent=true/";
+                urls[76] = "https://bandcamp.com/EmbeddedPlayer/album=340533062/size=large/bgcol=333333/linkcol=e32c14/tracklist=false/transparent=true/";
+                urls[77] = "https://bandcamp.com/EmbeddedPlayer/album=549574986/size=large/bgcol=333333/linkcol=e32c14/tracklist=false/transparent=true/";
+                urls[78] = "https://bandcamp.com/EmbeddedPlayer/album=666145617/size=large/bgcol=333333/linkcol=e32c14/tracklist=false/transparent=true/";
+                var randomUrl1 = Math.floor(Math.random() * urls.length);
+                var randomUrl2 = Math.floor(Math.random() * urls.length);
+                if (randomUrl2 === randomUrl1) {
+                    randomUrl2 = Math.floor(Math.random() * urls.length);
+                } else {
+                    document.getElementById("bcfeed1").src = urls[randomUrl1];
+                    document.getElementById("bcfeed2").src = urls[randomUrl2];
+                }
+                var randomUrl3 = Math.floor(Math.random() * urls.length);
+                if (randomUrl3 === randomUrl1) {
+                    randomUrl3 = Math.floor(Math.random() * urls.length);
+                } else if (randomUrl3 === randomUrl2) {
+                    randomUrl3 = Math.floor(Math.random() * urls.length);
+                } else {
+                    document.getElementById("bcfeed3").src = urls[randomUrl3];
+                }
+              </script>
           </div>
           </section>
 
