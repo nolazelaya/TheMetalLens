@@ -3,10 +3,10 @@
 <head>
     <meta charset="utf-8">
 
-    <title>HTML5 Bones :: PAGE TITLE</title>
+    <title>The Metal Lens</title>
 
     <!-- Enter a brief description of your page -->
-    <meta name="description" content="">
+    <meta name="description" content="A video podcast by two aging metal heads from New Orleans. We discuss music, news from the metal scene, local events, science, society. Pretty much anything that interests us, really. Life, the universe, and everything...from a metal point of view.">
 
     <!-- Define a viewport to mobile devices to use - telling the browser to assume that the page is as wide as the device (width=device-width,
     and setting the initial page zoom level to be 1 (initial-scale=1.0), and fixing width=device-width for iOS9 (shtink-to-fit=no) -->
@@ -20,108 +20,50 @@
     <!-- Include the site stylesheet -->
     <link href="css/styles.css" rel="stylesheet" media="all">
 
+    <link href="js/music.js" rel="scripts">
+
     <!-- Include the HTML5 shiv print polyfill for Internet Explorer browsers 8 and below -->
     <!--[if lt IE 9]><script src="js/html5shiv-printshiv.js" media="all"></script><![endif]-->
+
+    <!-- Google Fonts code: pasted below, always within the /head element -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Manrope:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Fontawesome script for social and other icons -->
+    <script src="https://kit.fontawesome.com/cd2c08ad81.js" crossorigin="anonymous"></script>
 </head>
 <body>
 
-    <!-- The page header typically contains items such as your site heading, logo and possibly the main site navigation -->
-    <!-- ARIA: the landmark role "banner" is set as it is the prime heading or internal title of the page -->
     <header role="banner">
-
-        <h1><abbr title="HyperText Markup Language 5">HTML5</abbr> Bones</h1>
-
-        <!-- ARIA: the landmark role "navigation" is added here as the element contains site navigation
-        NOTE: The <nav> element does not have to be contained within a <header> element, even though the two examples on this page are. -->
+        <h1><a href=index.html>The Metal Lens</a></h1>
         <nav role="navigation">
-            <!-- This can contain your site navigation either in an unordered list or even a paragraph that contains links that allow users to navigate your site -->
+            <h3><a href="#local-music">music</a></h3>
+            <h3><a href="#about">about</a></h3>
+            <h3><a href="#social">social</a></h3>
         </nav>
-
     </header>
 
-    <!-- If you want to use an element as a wrapper, i.e. for styling only, then <div> is still the element to use -->
     <div class="wrap">
-
-        <!-- The <main> element is used to enclose the main content, i.e. that which contains the central topic of a document -->
-        <!-- ARIA: the landmark role "main" is added here as it contains the main content of the document, and it is recommended to add it to the
-        <main> element until user agents implement the required role mapping. -->
         <main role="main">
-
-            <!-- The <section> element can be used to enclose content that comes under a related heading.
-            NOTE: The <section> element can contain <article> elements and vice versa, if you think the content warrants it. -->
-            <section>
-
-                <!-- This is the section's header. It contains the heading and navigation links for within the section -->
-                <header>
-                    <h2>Getting Started</h2>
-                    <!-- ARIA: the landmark role "navigation" is added here as the element contains page navigation -->
-                    <nav role="navigation">
-                        <ul>
-                            <li><a href="#introduction">Introduction</a></li>
-                            <li><a href="#instructions">Instructions</a></li>
-                        </ul>
-                    </nav>
-                </header>
-
-                <!-- The <article> element can be used to enclose content that still makes sense on its own and is therefore "reusable" -->
-                <article id="introduction">
-
-                    <!-- A <header> element is not required here as the heading only contains a single <h3> element -->
-                    <h3>Introduction</h3>
-
-                    <!-- Content -->
-                    <p>Welcome to <abbr title="HyperText Markup Language 5">HTML5</abbr> Bones. This is a template that contains comments to aid you with setting up your <abbr title="HyperText Markup Language 5">HTML5</abbr> document.</p>
-
-                </article>
-
-                <!-- The <article> element can be used to enclose content that still makes sense on its own and is therefore "reusable" -->
-                <article id="instructions">
-
-                    <!-- A <header> element is not required here as the heading only contains a single <h3> element -->
-                    <h3>Instructions</h3>
-
-                    <!-- Content -->
-                    <ol>
-                        <li>Read the comments in this template</li>
-                        <li>Decide how you think your content may fit into the template</li>
-                        <li>Start building your document</li>
-                    </ol>
-
-                </article>
-
-            </section>
+          <section id="404-message">
+            <h1>404: This page is forever lost</h1>
+            <p>Sorry, the page you are looking for exists only as faint memories echoing in boundless time.</p>
+            <h2><a href="index.html">Return home.</a></h2>
+          </section>
 
         </main>
-
-        <!-- An <aside> is used to enclose content that is additional to the main content but not essential. If it were removed, the meaning of the main content should not be lost, but the content of the <aside> also retains its meaning.
-        NOTE: the aside is placed outside of the <main> element as while its content is related to the content that is within the <main>
-        element, it is not part of it -->
-        <!-- ARIA: the landmark role "complementary" is added here as it contains supporting information for the main content that remains meaningful even when separated from it -->
-        <aside role="complementary">
-
-            <!-- A <header> element is not required here as the heading only contains a single <h3> element -->
-            <h3>Did you know?</h3>
-
-            <!-- Content -->
-            <p>The article and section elements cause a lot of confusion when people are trying to decide how and when to use them. The article: <a href="http://www.iandevlin.com/blog/2011/04/html5/html5-section-or-article">section or article?</a> might help you choose.</p>
-
-        </aside>
-
     </div>
 
-    <!-- The main page footer can contain items such as copyright and contact information. It can also contain a duplicated navigation of your site which is not usually contained within a <nav> -->
-    <!-- ARIA: the landmark role "contentinfo" is added here as it contains metadata that applies to the parent document -->
-    <footer role="contentinfo">
-
-        <!-- The <address> element contains contact information for the nearest <article> or <body> element. This example is for the <body> -->
-        <address>
-          <p>For further information, please contact <a href="mailto:admin@example.com">Max Mustermann</a>.</p>
-        </address>
-
-        <!-- Copyright information can be contained within the <small> element. The <time> element is used here to indicate that the '2018' is a date -->
-        <small>Copyright &copy; <time>2018</time></small>
-
-    </footer>
-
+  <footer role="contentinfo" id="social">
+    <div class="social-icons">
+      <a href="https://www.youtube.com/channel/UCULOba5EIzTC4fD1xu91zMQ" target="_blank"><i class="fa fa-brands fa-youtube-square""></i></a>
+      <a href="https://www.twitch.tv/themetallens" target="_blank"><i class="fa fa-brands fa-twitch"></i></a>
+      <a href="https://www.facebook.com/MetalLens" target="_blank"><i class="fa fa-brands fa-facebook-square"></i></a>
+      <a href="https://twitter.com/TheMetalLens" target="_blank"><i class="fa fa-brands fa-twitter-square"></i></a>
+    </div>
+    <div class="copyright">
+      <small>&copy; <time>2022</time> Metal Lens Productions</small>
+    </div>
+  </footer>
 </body>
 </html>
